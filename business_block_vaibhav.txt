@@ -1,0 +1,5 @@
+Problem 1: Too many AI tools for the same purpose. Confusion regarding which AI tool is best to use. (5)(monthly)(No)
+<br>
+Problem 2: Rapid advancement in technology, hard to keep up.  (8)(weekly)(No)
+<br>
+Problem 3: hard to browse through documentation to find API endpoints. (7)(weekly)(No)
