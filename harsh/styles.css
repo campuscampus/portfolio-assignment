@@ -98,6 +98,58 @@ section {
   padding: 8px 0;
   border-bottom: 1px solid #dddddd;
 }
+/* ===== PROJECTS ===== */
+#projects article {
+  background-color: #ffffff;
+  padding: 20px;
+  margin-top: 16px;
+  border-radius: 8px;
+  border: 1px solid #dddddd;
+}
+
+#projects h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: #1a1a1a;
+}
+
+/* ===== PROJECT GRID ===== */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  padding: 20px 0;
+}
+
+.project-card {
+  background-color: #ffffff;
+  padding: 24px;
+  border-radius: 8px;
+  border: 1px solid #dddddd;
+}
+
+.project-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #1a1a1a;
+}
+
+.project-card p {
+  font-size: 15px;
+  color: #666666;
+  margin-bottom: 16px;
+}
+
+.project-card a {
+  color: #00bcd4;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.project-card a:hover {
+  text-decoration: underline;
+}
+
 
 /* ===== CONTACT ===== */
 #contact {
