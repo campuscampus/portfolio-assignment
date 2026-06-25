@@ -1,0 +1,27 @@
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px;
+    background-color: aqua;
+}
+
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 01);
+    }
+
+        .footer {
+    display: flex;
+    flex-direction: row;
+      background-color: #222;
+      gap: 50px;
+      color: white;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+     margin-top: 40px;  
+    }
