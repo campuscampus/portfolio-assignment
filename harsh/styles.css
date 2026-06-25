@@ -1,0 +1,127 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== BODY ===== */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333333;
+}
+
+/* ===== NAV BAR ===== */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1a1a1a;
+  padding: 16px 40px;
+}
+
+nav {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+nav a:hover {
+  color: #00bcd4;
+}
+
+/* ===== MAIN ===== */
+main {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* ===== HEADINGS ===== */
+h1 {
+  font-size: 48px;
+  color: #1a1a1a;
+  margin-bottom: 16px;
+}
+
+h2 {
+  font-size: 28px;
+  color: #333333;
+  margin-bottom: 16px;
+}
+
+/* ===== PARAGRAPHS ===== */
+p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+/* ===== SECTIONS ===== */
+section {
+  padding: 40px 20px;
+  margin-bottom: 20px;
+}
+
+/* ===== ABOUT ===== */
+#about {
+  background-color: #ffffff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#about img {
+  max-width: 200px;
+  border-radius: 8px;
+  margin: 16px auto 0;
+  display: block;
+}
+
+/* ===== SKILLS ===== */
+#skills {
+  background-color: #ffffff;
+}
+
+#skills ul {
+  list-style: none;
+  padding: 20px 0;
+}
+
+#skills li {
+  font-size: 18px;
+  padding: 8px 0;
+  border-bottom: 1px solid #dddddd;
+}
+
+/* ===== CONTACT ===== */
+#contact {
+  text-align: center;
+  background-color: #ffffff;
+  padding: 40px 20px;
+}
+
+#contact a {
+  color: #00bcd4;
+  text-decoration: none;
+  font-size: 18px;
+  margin: 0 10px;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
