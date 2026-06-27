@@ -38,7 +38,7 @@
     display: flex;
 }
 
-@media (min-width: 769px) {
+ @media (min-width: 2000px) {
     .navbar {
         flex-direction: row;
         justify-content: center;
@@ -57,7 +57,7 @@
         padding-top: 0;
         gap: 40px;
     }
-}
+} 
 
 
     .card {
@@ -102,4 +102,22 @@ body {
 
 main {
     flex: 1;
+}
+
+body.dark-mode {
+    background-color: #1b1b1b;
+    color: white;
+}
+
+body.dark-mode .navbar {
+    background-color: #111;
+}
+
+body.dark-mode .card {
+    background-color: #2b2b2b;
+    color: white;
+}
+
+body.dark-mode .footer {
+    background-color: black;
 }
