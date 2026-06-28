@@ -8,10 +8,12 @@
   </head>
   <body>
     <header>
-      <nav>
+      <button id="hamburger">☰</button>
+      <nav id="main-nav">
         <a href="#about">About</a> | <a href="#skills">Skills</a> |
         <a href="#contact">Contact</a>
       </nav>
+      <button id="theme-toggle">🌙 Dark</button>
     </header>
 
     <main>
@@ -27,12 +29,38 @@
 
       <section id="skills">
         <h2>Skills</h2>
-        <ul>
-          <li>Git</li>
-          <li>Python</li>
-          <li>AI</li>
-          <li>HTML</li>
-        </ul>
+        <div class="skill-bars">
+          <div class="skill">
+            <div class="skill-label">Git</div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar" data-width="80"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <div class="skill-label">Python</div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar" data-width="65"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <div class="skill-label">HTML</div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar" data-width="90"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <div class="skill-label">JavaScript</div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar" data-width="50"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <div class="skill-label">AI</div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar" data-width="70"></div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section id="projects">
