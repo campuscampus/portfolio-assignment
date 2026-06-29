@@ -1,3 +1,4 @@
+/* :root -> Global color variables used by the full website. */
 :root {
     --page-bg: #f7f7f7;
     --text-color: #111;
@@ -10,6 +11,7 @@
     --skill-fill: linear-gradient(90deg, #16a34a, #2563eb);
 }
 
+/* body.dark-mode -> index2.html line 9: <body>; dark-mode class is added by js1.js. */
 body.dark-mode {
     --page-bg: #121212;
     --text-color: #f5f5f5;
@@ -22,15 +24,18 @@ body.dark-mode {
     --skill-fill: linear-gradient(90deg, #22c55e, #38bdf8);
 }
 
+/* html, body -> index2.html lines 2 and 9: <html> and <body>. */
 html, body {
     height: 100%;
     margin: 0;
 }
 
+/* html -> index2.html line 2: <html lang="en-US">. */
 html {
     scroll-behavior: smooth;
 }
 
+/* body -> index2.html line 9: <body>. */
 body {
     display: flex;
     flex-direction: column;
@@ -40,6 +45,7 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* .navbar -> index2.html line 11: <nav class="navbar">. */
 .navbar {
     display: grid;
     grid-template-columns: 1fr auto auto;
@@ -49,11 +55,13 @@ body {
     background-color: var(--nav-bg);
 }
 
+/* .navbar a -> index2.html lines 16-18: navigation links inside the navbar. */
 .navbar a {
     text-decoration: none;
     color: inherit;
 }
 
+/* .nav-toggle -> index2.html line 14: <button class="nav-toggle">. */
 .nav-toggle {
     display: block;
     grid-column: 3;
@@ -68,6 +76,7 @@ body {
     padding: 6px 12px;
 }
 
+/* .nav-links -> index2.html line 15: <div class="nav-links">. */
 .nav-links {
     display: none;
     grid-column: 1;
@@ -77,10 +86,12 @@ body {
     gap: 40px;
 }
 
+/* .navbar.nav-open .nav-links -> index2.html lines 11 and 15; nav-open is added by js1.js. */
 .navbar.nav-open .nav-links {
     display: flex;
 }
 
+/* #theme-toggle -> index2.html line 20: <button id="theme-toggle">. */
 #theme-toggle {
     grid-column: 2;
     cursor: pointer;
@@ -91,16 +102,19 @@ body {
     color: inherit;
 }
 
+/* main -> index2.html line 74: <main id="projects">. */
 main {
     flex: 1;
 }
 
+/* .projects-grid -> index2.html line 78: <div class="projects-grid">. */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 20px;
 }
 
+/* .card -> index2.html lines 80, 86, and 92: each project card. */
 .card {
     background: var(--card-bg);
     padding: 20px;
@@ -108,12 +122,14 @@ main {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* .skills-list -> index2.html line 122: <ul class="skills-list">. */
 .skills-list {
     list-style: none;
     padding-left: 0;
     max-width: 600px;
 }
 
+/* .skill -> index2.html lines 123-127: each skill list item. */
 .skill {
     position: relative;
     margin-bottom: 18px;
@@ -121,6 +137,7 @@ main {
     font-weight: bold;
 }
 
+/* .skill::before -> index2.html lines 123-127: gray background track for each skill bar. */
 .skill::before {
     content: "";
     position: absolute;
@@ -132,6 +149,7 @@ main {
     border-radius: 999px;
 }
 
+/* .skill::after -> index2.html lines 123-127: colored animated fill for each skill bar. */
 .skill::after {
     content: "";
     position: absolute;
@@ -144,10 +162,12 @@ main {
     transition: width 1s ease;
 }
 
+/* body.skills-loaded .skill::after -> index2.html line 9 and lines 123-127; skills-loaded is added by js1.js. */
 body.skills-loaded .skill::after {
     width: var(--level);
 }
 
+/* .footer -> index2.html line 132: <footer class="footer">. */
 .footer {
     display: flex;
     flex-direction: row;
@@ -160,7 +180,9 @@ body.skills-loaded .skill::after {
     margin-top: 200px;
 }
 
+/* @media -> Mobile layout rules for screens 768px wide or smaller. */
 @media (max-width: 768px) {
+    /* .navbar -> index2.html line 11: stacks the navbar on mobile. */
     .navbar {
         display: flex;
         flex-direction: column;
@@ -168,10 +190,12 @@ body.skills-loaded .skill::after {
         gap: 0;
     }
 
+    /* .nav-toggle -> index2.html line 14: keeps hamburger button on the right on mobile. */
     .nav-toggle {
         align-self: flex-end;
     }
 
+    /* .nav-links -> index2.html line 15: mobile menu links stack vertically. */
     .nav-links {
         flex-direction: column;
         width: 100%;
@@ -180,14 +204,17 @@ body.skills-loaded .skill::after {
         padding-top: 15px;
     }
 
+    /* .navbar.nav-open .nav-links -> index2.html lines 11 and 15: shows links after hamburger click. */
     .navbar.nav-open .nav-links {
         display: flex;
     }
 
+    /* #theme-toggle -> index2.html line 20: adds spacing under the mobile menu. */
     #theme-toggle {
         margin-top: 10px;
     }
 
+    /* .projects-grid -> index2.html line 78: project cards become 1 column on mobile. */
     .projects-grid {
         grid-template-columns: 1fr;
     }
