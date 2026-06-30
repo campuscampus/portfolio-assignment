@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pokédex Search</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+      background: #f5f5f5;
+    }
+
+    h1 { color: #333; }
+
+    .search-bar {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+
+    input {
+      flex: 1;
+      padding: 10px 14px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background: #e63946;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover { background: #c1121f; }
+
+    /* The status message box — used for loading, error, empty */
+    #status {
+      text-align: center;
+      padding: 40px;
+      font-size: 18px;
+      color: #666;
+      display: none;        /* hidden by default */
+    }
+
+    /* Card grid */
+    #results {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 16px;
+    }
+
+    /* Each Pokémon card */
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 16px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .card img { width: 96px; height: 96px; }
+    .card h3 { margin: 8px 0 4px; text-transform: capitalize; }
+    .card .types span {
+      display: inline-block;
+      padding: 2px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      background: #e8f4f8;
+      color: #1a6e99;
+      margin: 2px;
+    }
+    .card .stats { font-size: 13px; color: #888; margin-top: 6px; }
+  </style>
+</head>
+<body>
+
+  <h1>Pokédex Search</h1>
+
+  <div class="search-bar">
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="Enter Pokémon name e.g. pikachu"
+    />
+    <button id="searchBtn">Search</button>
+  </div>
+
+  <!-- Requirement 4, 5, 6: one div handles loading / error / empty messages -->
+  <div id="status"></div>
+
+  <!-- Requirement 3: cards go here, built by JS -->
+  <div id="results"></div>
+
+  <!-- Load our JS at the end so HTML is ready first -->
+  <script src="app.js"></script>
+
+</body>
+</html>

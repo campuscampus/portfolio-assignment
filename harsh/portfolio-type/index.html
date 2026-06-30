@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Harsh Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <button id="hamburger">☰</button>
+      <nav id="main-nav">
+        <a href="#about">About</a> | <a href="#skills">Skills</a> |
+        <a href="#contact">Contact</a>
+      </nav>
+      <button id="theme-toggle">🌙 Dark</button>
+    </header>
+
+    <main>
+      <section id="about">
+        <h1>Harsh Vardhan Upadhyay</h1>
+        <p>
+          I am currently pursuing my B.Tech degree in Computer Science. I am
+          learning Git concepts along with basic HTML.
+        </p>
+        <h2>Profile Photo</h2>
+        <img src="images.jpg" alt="Harsh" />
+      </section>
+
+      <section id="skills">
+        <h2>Skills</h2>
+        <div class="skill-bars">
+          <div class="skill">
+            <div class="skill-label">Git</div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar" data-width="80"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <div class="skill-label">Python</div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar" data-width="65"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <div class="skill-label">HTML</div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar" data-width="90"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <div class="skill-label">JavaScript</div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar" data-width="50"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <div class="skill-label">AI</div>
+            <div class="skill-bar-bg">
+              <div class="skill-bar" data-width="70"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+          <article class="project-card">
+            <h3>Portfolio Website</h3>
+            <p>My personal portfolio built with HTML and CSS.</p>
+            <a href="#" target="_blank">View Project</a>
+          </article>
+
+          <article class="project-card">
+            <h3>JS Practice</h3>
+            <p>Basic JavaScript functions — greet, double, isEmpty.</p>
+            <a href="#" target="_blank">View Project</a>
+          </article>
+
+          <article class="project-card">
+            <h3>Coming Soon</h3>
+            <p>More projects on the way as I keep learning.</p>
+            <a href="#" target="_blank">View Project</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2>Contact information</h2>
+        <form id="contact-form">
+          <input type="text" id="nameInput" placeholder="Your name" />
+          <input type="email" id="emailInput" placeholder="Your email" />
+          <button type="submit">Send message</button>
+        </form>
+        <p id="form-msg"></p>
+        <p>
+          <a href="https://github.com/harshvardhan-dev-code" target="_blank"
+            >Github</a
+          >
+          |
+          <a href="mailto:upadhyay.harshv@gmail.com">Email</a>
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>Harsh © 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
