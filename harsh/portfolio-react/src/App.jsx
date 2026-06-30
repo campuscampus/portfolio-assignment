@@ -1,50 +1,60 @@
-import { useState, useEffect } from 'react';
-import Header from './components/Header';
-import ProjectCard from './components/ProjectCard';
-import SkillTag from './components/SkillTag';
+import { useState } from 'react';
+import SearchBar from './components/SearchBar';
+import PokemonCard from './components/PokemonCard';
 
 function App() {
-  const [darkMode, setDarkMode] = useState(true);
-  const [quote, setQuote] = useState('');
-  const skills = ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'React'];
+  const [query, setQuery] = useState('');
+  const [pokemon, setPokemon] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
 
-  useEffect(() => {
-  fetch('https://dummyjson.com/quotes/random')
-    .then(res => res.json())
-    .then(data => setQuote(data.quote));
-}, []);
+  async function searchPokemon() {
+    if (!query) return;
+
+    setLoading(true);
+    setError('');
+    setPokemon(null);
+
+    try {
+      const res = await fetch(
+        `https://pokeapi.co/api/v2/pokemon/${query.toLowerCase()}`
+      );
+
+      if (!res.ok) {
+        setError(`No Pokémon found for "${query}". Check the spelling!`);
+        return;
+      }
+
+      const data = await res.json();
+      setPokemon(data);
+
+    } catch  {
+      setError('Something went wrong. Check your internet.');
+    } finally {
+      setLoading(false);
+    }
+  }
 
   return (
-    <div style={{
-      backgroundColor: darkMode ? '#1a1a1a' : '#ffffff',
-      color: darkMode ? '#ffffff' : '#000000',
-      minHeight: '100vh',
-      padding: '20px'
-    }}>
-      <button onClick={() => setDarkMode(!darkMode)}>
-        {darkMode ? '☀️ Light Mode' : '🌙 Dark Mode'}
-      </button>
+    <div className="min-h-screen bg-gray-900 text-white flex flex-col items-center py-12">
+      <h1 className="text-4xl font-bold mb-2">Pokémon Search</h1>
+      <p className="text-gray-400 mb-8">Search any Pokémon by name</p>
 
-      <Header />
-
-      <p>💬 {quote}</p>
-
-      <ProjectCard
-        title="Pokémon Search App"
-        description="Search any Pokémon and see their stats"
-        link="https://github.com/harsh"
-      />
-      <ProjectCard
-        title="Portfolio Website"
-        description="My personal portfolio built with HTML CSS JS"
-        link="https://github.com/harsh"
+      <SearchBar
+        query={query}
+        setQuery={setQuery}
+        onSearch={searchPokemon}
       />
 
-      <div>
-        {skills.map(skill => (
-          <SkillTag key={skill} skill={skill} />
-        ))}
-      </div>
+      {loading && (
+        <p className="text-yellow-400 text-lg">Loading...</p>
+      )}
+
+      {error && (
+        <p className="text-red-400 text-lg">{error}</p>
+      )}
+
+      {pokemon && <PokemonCard pokemon={pokemon} />}
     </div>
   );
 }
