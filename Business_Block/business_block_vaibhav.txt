@@ -1,0 +1,9 @@
+Problem 1: Rapid advancement in technology, hard to keep up.  (8)(weekly)(No)
+
+Problem 2: hard to browse through documentation to find API endpoints. (7)(weekly)(No)
+
+Problem 3: hard to browse through documentation to find API endpoints. (7)(weekly)(No)
+
+Problem 4: too many accounts across various websites, hard to track credentials. (8)(weekly)(No)
+
+Problem 5: Finding what actually works in the Market. Too much confusion. (9)(weekly)(Yes)
