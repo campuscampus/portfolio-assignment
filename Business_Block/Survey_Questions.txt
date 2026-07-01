@@ -1,0 +1,21 @@
+1) Which option best describes you?
+Student / Job seeker / Working professional / Small business owner / Teacher or trainer / Other
+
+2) How often do you feel the need to learn about new technology or AI tools to stay updated?
+Daily / Weekly / Monthly / Rarely / Never
+
+3) In the last 1 month, how difficult was it for you to decide which new tech tools or skills are actually worth learning?
+1 = Not difficult, 5 = Very difficult
+
+4) What is the biggest reason it is hard for you to keep up with technology?
+Too much information / Content is too technical / I do not know what is relevant to me / I do not have enough time / Tools change too quickly / Other
+
+5) What do you currently use to stay updated with technology?
+YouTube / Instagram or LinkedIn / Newsletters / Online courses / Friends or classmates / Google search / I do not use anything regularly
+
+6) How satisfied are you with your current way of staying updated?
+1 = Very unsatisfied, 5 = Very satisfied
+Follow-up: What is missing from your current method?
+
+7) If you got a short weekly guide that explains “what changed, why it matters, one thing to try and how to use it” how likely are you to use it?
+1 = Very unlikely, 5 = Very likely
