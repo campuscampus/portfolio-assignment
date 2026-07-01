@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.app {
+    min-height: 100vh;
+    padding: 20px;
+    background: white;
+    color: black;
+}
+
+.app.dark {
+    background: #111;
+    color: white;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.header nav {
+    display: flex;
+    gap: 15px;
+}
+
+.header a {
+    color: inherit;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 10px;
+}
+
+.card {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-tag {
+    border: 1px solid #ccc;
+    padding: 6px;
+}
